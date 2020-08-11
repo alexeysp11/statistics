@@ -25,4 +25,3 @@ Q = SS / (2*(n-1))
 print('S = ', float(S))
 print('Q = ', float(Q))
 print('q = ', float(Q / S))
-

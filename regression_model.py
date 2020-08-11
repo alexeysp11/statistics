@@ -1,6 +1,5 @@
-# Regression model FOPI
+# Regression model 
 
-# LIBRARIES
 import pandas as pd
 import numpy as np
 from scipy import linalg
@@ -8,14 +7,7 @@ from scipy import interpolate
 import matplotlib.pyplot as plt
 
 
-# CLASS REGREESSION MODEL
 class RegrssionModel:
-    # INIT FUNCTION
-##    def __init__(self):
-##        pass
-
-    
-    # READ DATA 
     def read_data(self):
         # get data from a file and display it
         df = pd.read_excel(r'C:\Users\User\Desktop\university\ФОПИ\6 семестр\расчеты.xlsx',
@@ -29,7 +21,6 @@ class RegrssionModel:
         self.y2 = np.array(df['y_2'].dropna())
 
 
-    # BUILD A POLYNOMIAL MODEL WITH LEAST SQUARES METHOD
     def least_squares(self):
         # redefine variables to reduce the time on typing
         x, y1, y2 = self.x, self.y1, self.y2
@@ -46,7 +37,7 @@ class RegrssionModel:
               %(self.linear_2[0], self.linear_2[1]))
         
 
-    # PLOT DATA 
+
     def plot_data(self):
         # redefine variables to reduce the time on typing
         x, y1, y2 = self.x, self.y1, self.y2
@@ -82,7 +73,6 @@ class RegrssionModel:
         plt.show()
 
 
-# MAIN FUNCTION
 def main():
     regression = RegrssionModel()
     regression.read_data()

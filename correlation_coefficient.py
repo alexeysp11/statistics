@@ -1,6 +1,5 @@
 # Correlation coefficient
 
-# LIBRARIES
 import pandas as pd
 import numpy as np
 from tabulate import tabulate
@@ -9,9 +8,7 @@ from scipy import stats
 import math
 
 
-# INITIALIZE A CLASS
-class CorrelationAnalysis:    
-    # READ DATA
+class CorrelationAnalysis: 
     def read_data(self):
         # get and print out input data 
         df = pd.read_excel(r'non_parametric_methods.xlsx',
@@ -24,7 +21,7 @@ class CorrelationAnalysis:
         self.y = np.array(df['y'])
 
 
-    # CALCULATION OF CORRELATION COEFFICIENTS
+    # calculate correlation coefficients
     def calc_coef(self):
         # number of elements in input array
         n = len(self.x)
@@ -57,7 +54,6 @@ class CorrelationAnalysis:
         print(tabulate(list_for_table, headers=headers_table))
 
 
-    # DRAW DATA 
     def draw_data(self):
         # initialize self.x and self.y as x and y respectively 
         x = self.x
@@ -71,7 +67,6 @@ class CorrelationAnalysis:
         plt.show()
 
 
-# MAIN FUNCTION 
 def main():
     # Declare an instance correlation as a class Slope_Regression
     correlation = CorrelationAnalysis()

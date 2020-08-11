@@ -1,9 +1,12 @@
-# Multiple linear regression
+"""
+Multiple linear regression
 
-# After that we can devide a sample into 2 samples, use
-# some criterion for outliers detection, calculate F-ratio
-# and correletion coefficient r and find a confidence
-# interval for correletion coefficient
+After that we can devide a sample into 2 samples, use
+some criterion for outliers detection, calculate F-ratio
+and correletion coefficient r and find a confidence
+interval for correletion coefficient
+"""
+
 import pandas as pd
 from pandas import ExcelWriter
 from pandas import ExcelFile

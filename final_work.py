@@ -1,8 +1,9 @@
-# Prepare for exam stats 6th season
-# we use here wilcoxon, hodges-lehmann, ks, spearman
+"""
+Prepare for exam stats 6th season
+Here we use wilcoxon, hodges-lehmann, ks and spearman tests. 
+"""
 
 
-# LIBRARIES
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -10,9 +11,7 @@ from tabulate import tabulate
 import matplotlib.pyplot as plt
 
 
-# CLASS DATA ANALYSIS
 class DataAnalysis:
-    # READ DATA 
     def read_data(self):
         # get data from a file and display it
         df = pd.read_excel(r'non_parametric_methods.xlsx',
@@ -25,7 +24,7 @@ class DataAnalysis:
         self.y = np.array(df['y'].dropna())
 
 
-    # HODGES-LEHMANN ESTIMATOR
+    # Hodges-Lehmann estimator
     def hodges_lehmann(self):
         # initialize sizes of samples
         x, y = self.x, self.y
@@ -51,7 +50,6 @@ class DataAnalysis:
         return delta_hat
 
 
-    # CALCULATE MEDIAN
     def calculateMedian(self, List):
         data = sorted(List)
         n = len(data)
@@ -64,7 +62,7 @@ class DataAnalysis:
             return (data[i - 1] + data[i]) / 2 
 
 
-    # ANALYZE DATA
+    # analyze data
     def analysis(self):
         x, y = self.x, self.y
         
@@ -91,7 +89,6 @@ class DataAnalysis:
         print(tabulate(list_for_table, headers=headers_table))
 
 
-    # PLOT DATA 
     def plot_data(self):
         # redefine variables to reduce the time on typing
         x, y = self.x, self.y
@@ -111,11 +108,9 @@ class DataAnalysis:
         plt.title('Scatter plot')
         plt.grid()
    
-        # plot all
         plt.show()
 
 
-# MAIN FUNCTION
 def main():
     # da (short of data analysis) is an instance of DataAnalysis class
     da = DataAnalysis()

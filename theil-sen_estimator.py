@@ -1,6 +1,5 @@
 # Theil-Sen Estimator
 
-# LIBRARIES
 import pandas as pd
 import numpy as np
 from tabulate import tabulate
@@ -8,9 +7,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 
-# INITIALIZE A CLASS
-class Slope_Regression:    
-    # READ DATA
+class Slope_Regression: 
     def ReadData(self):
         # get and print out input data 
         df = pd.read_excel(r'non_parametric_methods.xlsx',
@@ -25,7 +22,6 @@ class Slope_Regression:
         self.y = y.reshape((len(y), 1))
 
 
-    # TEST NULL HYPOTHESIS
     # H_0: slope=0, H_A: slope != 0
     def IsEqualHypothesis(self):
         # find differences of actual and expected y if slope = 0
@@ -71,7 +67,6 @@ class Slope_Regression:
         self.PrintOutHypothesis()
 
 
-    # THEIL-SEN ESTIMATOR
     def TheilSenEsimator(self, alpha):
         # calculate Theil-Sen estimation 
         res = stats.theilslopes(self.y, self.x, alpha)
@@ -80,7 +75,6 @@ class Slope_Regression:
         return res
 
     
-    # DRAW THEIL-SEN ESTIMATION AND CONFIDENCE INTERVAL
     def Draw(self):
         # initialize self.x and self.y as x and y respectively 
         x = self.x
@@ -125,7 +119,6 @@ class Slope_Regression:
         print("num_dif: %d, C: %d\n" %(self.num_dif, self.sum_c))
 
 
-# MAIN FUNCTION 
 def main():
     # Declare an instance slope_estimator as a class Slope_Regression
     slope_estimator = Slope_Regression()
@@ -144,6 +137,7 @@ def main():
     
     # Draw plots of linear regression and Theil-Sen
     slope_estimator.Draw()
+
 
 if __name__ == '__main__':
     main()

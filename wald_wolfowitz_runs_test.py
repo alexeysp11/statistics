@@ -3,6 +3,7 @@
 import pandas as pd
 import numpy as np
 
+
 def calculateMedian(list):
     data = sorted(list)
     n = len(data)
@@ -13,6 +14,7 @@ def calculateMedian(list):
     else:
         i = n // 2
         return (data[i - 1] + data[i]) / 2
+
 
 def runs_test(data):
     row = ''
@@ -35,6 +37,7 @@ def runs_test(data):
             or (data[i] < median and data[i + 1] >= median)):
             r = r + 1
     return row, median, positive, negative, r
+
 
 def main(): 
     df = pd.read_excel(r'non_parametric_methods.xlsx',
