@@ -2,7 +2,6 @@
 Plot the graph of a quadratic function.
 """
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 
