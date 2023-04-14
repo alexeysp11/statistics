@@ -1,4 +1,4 @@
-# Correlation coefficient
+# Pearson correlation coefficient
 
 import pandas as pd
 import numpy as np

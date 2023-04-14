@@ -3,7 +3,6 @@
 import pandas as pd
 import numpy as np
 from scipy.stats import ranksums
-    
 
 def main():
     df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
@@ -19,7 +18,6 @@ def main():
 
     stat, p = ranksums(x, y)
     print('T = %.3f, p = %.3f' % (stat, p))
-
 
 if __name__ == '__main__':
     main()
