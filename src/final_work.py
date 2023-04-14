@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 class DataAnalysis:
     def read_data(self):
         # get data from a file and display it
-        df = pd.read_excel(r'non_parametric_methods.xlsx',
+        df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
                            sheet_name = 'Подготовка к зачету')
         print('INPUT DATA:')
         print(df, '\n')

@@ -9,4 +9,5 @@ pip install pandas
 pip install scipy
 pip install matplotlib
 pip install tabulate
+pip install openpyxl
 ```

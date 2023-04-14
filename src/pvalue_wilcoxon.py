@@ -5,7 +5,7 @@ import numpy as np
 
 class P_Value:
     def read_data():
-        df = pd.read_excel(r'non_parametric_methods.xlsx',
+        df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
                            sheet_name = 'Лист3')
         print(df, '\n')
 
@@ -50,7 +50,7 @@ class P_Value:
     
 
 def main():
-    df = pd.read_excel(r'non_parametric_methods.xlsx',
+    df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
                            sheet_name = 'Лист3')
     print(df, '\n')
 

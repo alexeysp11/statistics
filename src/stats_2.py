@@ -12,7 +12,7 @@ class StatisticalMethods:
     # Read data from Excel file 
     def __init__(self):
         # rename sheet_name! 
-        df = pd.read_excel(r'non_parametric_methods.xlsx', sheet_name = 'Лист1')
+        df = pd.read_excel(r'../docs/non_parametric_methods.xlsx', sheet_name = 'Лист1')
         self.data = np.array(df)
 
     # Check if a dataset is well modeled by a normal distribution 

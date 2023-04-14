@@ -40,7 +40,7 @@ def runs_test(data):
 
 
 def main(): 
-    df = pd.read_excel(r'non_parametric_methods.xlsx',
+    df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
                        sheet_name = 'Лист1')
     data = np.matrix(df)
 
