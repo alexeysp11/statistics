@@ -7,11 +7,10 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import math
 
-
 class CorrelationAnalysis: 
     def read_data(self):
         # get and print out input data 
-        df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
+        df = pd.read_excel(r'../data/nonparametric.xlsx',
                            sheet_name = 'Лист5')
         print('INPUT DATA:')
         print(df, '\n')

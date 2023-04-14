@@ -31,7 +31,7 @@ def switch_color(k):
 def main():
     
     # READ DATA
-    df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
+    df = pd.read_excel(r'../data/nonparametric.xlsx',
                        sheet_name = 'Лист3')
     print(df, '\n')
 

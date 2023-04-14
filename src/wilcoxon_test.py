@@ -5,7 +5,7 @@ import numpy as np
 from scipy.stats import ranksums
 
 def main():
-    df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
+    df = pd.read_excel(r'../data/nonparametric.xlsx',
                        sheet_name = 'Лист3')
     print(df, '\n')
 

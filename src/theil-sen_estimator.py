@@ -10,7 +10,7 @@ from scipy import stats
 class Slope_Regression: 
     def ReadData(self):
         # get and print out input data 
-        df = pd.read_excel(r'../docs/non_parametric_methods.xlsx',
+        df = pd.read_excel(r'../data/nonparametric.xlsx',
                            sheet_name = 'Лист4')
         print('INPUT DATA:')
         print(df, '\n')
